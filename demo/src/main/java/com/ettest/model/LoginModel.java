@@ -1,8 +1,5 @@
 package com.ettest.model;
 
-import javax.persistence.Entity;
-
-@Entity
 public class LoginModel {
 
   private String emialId;
@@ -28,5 +25,8 @@ public class LoginModel {
   public LoginModel(String emialId, String password) {
     this.emialId = emialId;
     this.password = password;
+  }
+
+  public LoginModel() {
   }
 }

@@ -50,6 +50,9 @@ public class LoginCreds {
     this.password = password;
   }
 
+  public LoginCreds() {
+  }
+
   public Boolean validate(LoginModel loginModel) {
     if (this.getEmailId() != loginModel.getEmialId() || this.getPassword() != loginModel.getPassword()) {
        return false;

@@ -1,8 +1,5 @@
 package com.ettest.model;
 
-import javax.persistence.Entity;
-
-@Entity
 public class DecryptModel {
 
   private String emialId;

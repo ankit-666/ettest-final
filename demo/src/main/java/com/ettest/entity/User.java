@@ -1,5 +1,7 @@
 package com.ettest.entity;
 
+import com.ettest.enums.UserType;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
@@ -9,7 +11,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "USER")
+@Table(name = "USER_DATA")
 public class User {
 
   @Id
@@ -24,7 +26,7 @@ public class User {
 
   @Enumerated(EnumType.STRING)
   @Column(name = "USER_TYPE")
-  private String userType;
+  private UserType userType;
 
   @Column(name = "EMAIL_ID")
   private String emailId;
@@ -53,11 +55,11 @@ public class User {
     this.lastName = lastName;
   }
 
-  public String getUserType() {
+  public UserType getUserType() {
     return userType;
   }
 
-  public void setUserType(String userType) {
+  public void setUserType(UserType userType) {
     this.userType = userType;
   }
 
@@ -69,10 +71,13 @@ public class User {
     this.emailId = emailId;
   }
 
-  public User(String firstName, String lastName, String userType, String emailId) {
+  public User(String firstName, String lastName, UserType userType, String emailId) {
     this.firstName = firstName;
     this.lastName = lastName;
     this.userType = userType;
     this.emailId = emailId;
+  }
+
+  public User() {
   }
 }
