@@ -6,21 +6,19 @@ document.querySelector("head").appendChild(jq);
 
 function proceed () {
    $( document ).ready(function() {
-    $('loginbtn').click(  function () {
-                console.log("click");
-                var emailId = document.getElementById("Email");
-                var password = document.getElementById("Password");
-
+    $('#loginbtn').click(  function () {
+               console.log($("#Email").val());
+               console.log($("#Password").val());
                 $.ajax({
-                    url: '/ettest/login',    //Your api url
+                    url: 'https://abcaaa.free.beeceptor.com',    //Your api url
                     type: 'PUT',   //type is any HTTP method
                     contentType: "application/json; charset=utf-8",
                     data: {
-                        "emialId": $("Email").val(),
-                        "password": $("Password").val()
+                        "emialId": $("#Email").val(),
+                        "password": $("#Password").val()
                     },      //Data as js object
-                    success: function () {
-                    	myFunction();
+                    success: function (result) {
+                    	console.log('my message' + result);
                     }
                 });
 
