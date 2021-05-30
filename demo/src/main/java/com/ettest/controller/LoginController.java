@@ -33,7 +33,7 @@ public class LoginController {
 
   @Autowired
   @Qualifier("com.ettest.service.impl.LoginServiceImpl")
-  private LoginService loginService;
+  LoginService loginService;
 
   @RequestMapping(value = "/register", method = RequestMethod.POST)
   public ResponseEntity<Long> register(@RequestBody RegisterModel registerModel) {

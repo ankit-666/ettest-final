@@ -25,9 +25,6 @@ public class Token {
     this.createdOn = createdOn;
   }
 
-  public Token() {
-  }
-
   public Long getId() {
 
     return id;

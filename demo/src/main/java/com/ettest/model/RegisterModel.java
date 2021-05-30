@@ -1,14 +1,15 @@
 package com.ettest.model;
 
-import com.ettest.enums.UserType;
+import javax.persistence.Entity;
 
+@Entity
 public class RegisterModel {
 
   private String firstName;
 
   private String lastName;
 
-  private UserType userType;
+  private String userType;
 
   private String email;
 
@@ -30,11 +31,11 @@ public class RegisterModel {
     this.lastName = lastName;
   }
 
-  public UserType getUserType() {
+  public String getUserType() {
     return userType;
   }
 
-  public void setUserType(UserType userType) {
+  public void setUserType(String userType) {
     this.userType = userType;
   }
 
@@ -54,15 +55,12 @@ public class RegisterModel {
     this.password = password;
   }
 
-  public RegisterModel(String firstName, String lastName, UserType userType, String email,
+  public RegisterModel(String firstName, String lastName, String userType, String email,
       String password) {
     this.firstName = firstName;
     this.lastName = lastName;
     this.userType = userType;
     this.email = email;
     this.password = password;
-  }
-
-  public RegisterModel() {
   }
 }

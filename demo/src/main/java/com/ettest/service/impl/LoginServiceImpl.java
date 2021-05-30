@@ -43,31 +43,31 @@ public class LoginServiceImpl implements LoginService {
 
   @Autowired
   @Qualifier("com.ettest.repository.LoginCredsRepository")
-  private LoginCredsRepository loginCredsRepository;
+  LoginCredsRepository loginCredsRepository;
 
   @Autowired
   @Qualifier("com.ettest.repository.UserRepository")
-  private UserRepository userRepository;
+  UserRepository userRepository;
 
   @Autowired
   @Qualifier("com.ettest.utility.AesCryptographerUtility")
-  private AesCryptographerUtility aesCryptographerUtility;
+  AesCryptographerUtility aesCryptographerUtility;
 
   @Autowired
   @Qualifier("com.ettest.utility.QrUtility")
-  private QrUtility qrUtility;
+  QrUtility qrUtility;
 
   @Autowired
   @Qualifier("com.ettest.utility.MailUtility")
-  private MailUtility mailUtility;
+  MailUtility mailUtility;
 
   @Autowired
   @Qualifier("com.ettest.utility.TokenUtility")
-  private TokenUtility tokenUtility;
+  TokenUtility tokenUtility;
 
   @Autowired
   @Qualifier("com.ettest.repository.TokenRepository")
-  private TokenRepository tokenRepository;
+  TokenRepository tokenRepository;
 
   @Override
   public ResponseEntity<Long> register(RegisterModel registerModel) {
